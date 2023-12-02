@@ -1,0 +1,277 @@
+:root{
+    --plum:#6C4786;
+    --sunrise:#A3619F;
+    --lavender:#C7A7D9;
+    --sunspot:#f7b699;
+    --cloudtop:#FBDFEB;
+    --cloud:#f8eef2;
+}
+
+
+header{
+    background: var(--sunrise);
+}
+
+.navbar-toggler{
+    border: 1px solid var(--plum);
+}
+
+body{
+    background-color: var(--cloud);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+main.noteComponent{
+    align-items: start;
+}
+
+main div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    margin: 2%;
+}
+
+p{
+    margin: 2%;
+    padding: auto;
+}
+
+main a{
+    margin: 10px 10px;
+    padding: 1%;
+    border: 1px solid var(--plum);
+    background-color: var(--lavender);
+    color: var(--plum);
+    border-radius: 20px;
+    width: 200px;
+}
+
+.container main{
+    min-height: 90vh;
+}
+
+.background_stuff{
+    background-color: var(--lavender);
+    padding: 2% 5%;
+    text-align: start;
+    color: var(--plum);
+    border-radius: 4px;
+}
+
+.background_stuff button{
+    background-color: var(--sunrise);
+    border-radius: 12px;
+    border-style: double;
+    color: var(--cloud);
+    text-align: center;
+    padding: 3px 10px;
+
+}
+
+.login_signup_stuff button{
+    background-color: var(--sunrise);
+    border-radius: 12px;
+    border-style: double;
+    color: var(--cloud);
+    text-align: center;
+    min-width: 15%;
+}
+
+.one_col{
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 12px;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr;
+}
+
+.labelAlign, .water{
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 4fr;
+    padding-bottom: 3%;
+    align-items: center;
+}
+
+.water{
+    display: flex;
+    grid-template-columns: unset;
+}
+
+.water input{
+    padding: unset !important;
+    width: 50px;
+    text-align: center;
+    border-style: none;
+}
+
+input[type=text], input[type=password], input[type=number]{
+    border-radius: 12px;
+    padding: 0% 8%;
+}
+
+textarea{
+    border-radius: 12px;
+    padding: 2% 4%;
+    min-height: 60px;
+    resize: none;
+    overflow-y: scroll;
+    border-style: none;
+}
+
+#notes, #important{
+    min-height: 150px;
+}
+
+
+.one_col label{
+    text-align: right;
+    align-items: center;
+}
+
+legend{
+    font-size: medium;
+    padding: 0 10px;
+    float: unset;
+    width: max-content;
+    text-align: center;
+}
+
+.signup_form {
+    width: 70%;
+    display: block;
+}
+
+.signup_form form{
+    margin: 2%;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr;
+}
+
+.fields{
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 3%;
+}
+
+.fields label{
+    margin: 2%;
+    width: 100%;
+    text-align: start;
+    font-size: medium;
+    box-sizing: border-box;
+}
+
+.fields input{
+    margin: 2%;
+    width: 100%;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.save{
+    display: grid;
+    text-align: center;
+}
+
+.react-calendar{
+    display: block;
+    width: 40%;
+    border: 1px solid var(--plum);
+    background-color: var(--sunspot) !important;
+    padding: 1%;
+    border-radius: 3%;
+    margin-bottom: 2%;
+}
+
+.react-calendar__month-view__weekdays{
+    display: contents !important;
+}
+
+.react-calendar__tile--active{
+    background-color: var(--plum) !important;
+
+}
+
+.react-calendar__tile--now{
+    background-color: var(--cloudtop) !important;
+    color: var(--plum) !important;
+}
+
+.break{
+    flex-basis: 100%;
+    height:0;
+}
+
+.quote{
+    width: 75%;
+    margin: 2% 2%;
+    background-color: var(--cloudtop);
+    border-radius: 20px;
+    font-size: small;
+    font-style: italic;
+}
+
+
+@media only screen and (max-device-width: 767px){
+    
+    .background_stuff{
+        width: 95%;
+    }
+
+    #noteForm{
+        width: 100%;
+    }
+
+    .fields{
+        grid-gap: 1%;
+        grid-template-columns: 1fr;
+        margin-bottom: 10%;
+    }
+
+    .fields label, .fields input{
+        margin: 1%;
+        text-align: center;
+    }
+
+    .labelAlign{
+        grid-template-columns: 1fr;
+    }
+
+    fieldset{
+        width: 1fr;
+    }
+
+    .labelAlign label{
+        text-align: center;
+    }
+
+    textarea{
+        width: 100%;
+    }
+
+    .one_col{
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media only screen and (max-device-width: 425px){
+    .react-calendar{
+        width: 75%;
+    }
+}
