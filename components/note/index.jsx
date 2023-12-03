@@ -45,7 +45,6 @@ export default function Note(props) {
 
   async function handleSaveNote(e){
     e.preventDefault();
-    console.log(noteID, "here")
     if(noteID){
       method = "PUT"
       bodyContent = {priorities, gratitude, water, notes, important, noteID}
@@ -55,7 +54,6 @@ export default function Note(props) {
       bodyContent = {priorities, gratitude, water, notes, important, today}
     }
     try{
-      console.log(method)  
       const res = await fetch('/api/note', {
         method: method,
         credentials: "include",
@@ -64,7 +62,6 @@ export default function Note(props) {
         },
         body: JSON.stringify(bodyContent)
       });
-      console.log(res)  
       if (res.status === 200) return router.push("/");
       else{
         const noteError = await res.text();
@@ -128,7 +125,6 @@ export default function Note(props) {
                             },
                         });
                         const list = await res.json()
-                        console.log(list)
                         setNote(list)
                         
                     }
@@ -142,7 +138,6 @@ export default function Note(props) {
                         noNoteNotice.innerHTML = "There was no note saved on this date"
                     }
                     const emptyList = {priorities:null, gratitude:null, water:null, notes:null, important:null}
-                    console.log(emptyList)
                     setNote(emptyList)
                     return
                 }
