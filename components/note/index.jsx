@@ -15,7 +15,7 @@ export default function Note(props) {
   let viewDate = format(new Date(), 'MMM do yyyy');
   const router = useRouter()
   const [myNotes, setNotes] = useState([])
-  let exists;
+  const [display, setDisplay] = useState(true);
   let method;
   let bodyContent;
   
@@ -94,23 +94,29 @@ export default function Note(props) {
     }
   }
 
+  function displaySave(){
+      if(viewDate === today){
+          setDisplay(true)
+        }
+        else{
+        setDisplay(false)
+    }
+  }
+
   async function getNoteData(props){
-    console.log(viewDate)
+    displaySave()
+    const noNoteNotice = document.getElementById("noNote")
+    const pageTitle = document.getElementById("pageTitle")
       try{
           if(!(myNotes.length > 0)){
-                exists = false
-                console.log("false")
                 return
             }
             else {
                 const note = myNotes.filter((savedNote => savedNote.noteDate === viewDate))
-                console.log(note, "here")
-                if (note){
-                    const pageTitle = document.getElementById("pageTitle")
-                    pageTitle.innerHTML = "Note for " + viewDate
-                    exists = true
+                pageTitle.innerHTML = "Note for " + viewDate
+                if (note.length > 0){
+                    noNoteNotice.innerHTML = ""
                     setNoteID(note[0].id)
-                    console.log(noteID)
                     try{
                         const res = await fetch("/api/note?", {
                             method: "GET",
@@ -122,6 +128,7 @@ export default function Note(props) {
                             },
                         });
                         const list = await res.json()
+                        console.log(list)
                         setNote(list)
                         
                     }
@@ -131,7 +138,12 @@ export default function Note(props) {
                     }
                 }
                 else {
-                    exists = false
+                    if(!(viewDate === today)){
+                        noNoteNotice.innerHTML = "There was no note saved on this date"
+                    }
+                    const emptyList = {priorities:null, gratitude:null, water:null, notes:null, important:null}
+                    console.log(emptyList)
+                    setNote(emptyList)
                     return
                 }
             }
@@ -167,6 +179,7 @@ export default function Note(props) {
                     <div className="break"></div>
                     <Calendar onChange={selectDate} value={value}/>
                     <div className="background_stuff">
+                        <div id="noNote"></div>
                         <form id="noteForm" onSubmit={handleSaveNote}>
                         <div className="one_col">
                             <div className="labelAlign">
@@ -191,7 +204,14 @@ export default function Note(props) {
                             </div>
                         </div>
                         <div className="break"></div>
-                        <div className="save"><button>Save</button></div>
+                        {display ? (
+                            <>
+                            <div className="save"><button>Save</button></div>
+                            </>
+                            ) : (
+                            <>
+                            </>
+                        )}
                         </form>
                     </div>
                 </div>

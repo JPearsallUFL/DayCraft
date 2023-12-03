@@ -43,6 +43,10 @@ h1{
     margin: 2%;
 }
 
+header h1{
+    color: var(--sunspot);
+}
+
 p{
     margin: 2%;
     padding: auto;
