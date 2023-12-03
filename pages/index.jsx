@@ -40,6 +40,7 @@ export default function Home(props) {
           <div>
           <div>
             <h1>Welcome to DayCraft</h1>
+            <div className="break"></div>
             <p>DayCraft is a web application that enables users to create and edit daily notes.</p>
             <Quote />
           </div>

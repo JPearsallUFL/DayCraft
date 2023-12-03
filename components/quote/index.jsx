@@ -18,6 +18,7 @@ export default function Quote(){
     return(
         <div className="quote">
             <p>{quote}</p>
+            <div className="break"></div>
             <p>~{author}</p>
         </div>
     )
