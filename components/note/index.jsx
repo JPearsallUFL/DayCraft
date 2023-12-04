@@ -45,7 +45,7 @@ export default function Note(props) {
 
   async function handleSaveNote(e){
     e.preventDefault();
-    if(noteID){
+    if(noteID && display){
       method = "PUT"
       bodyContent = {priorities, gratitude, water, notes, important, noteID}
     }
