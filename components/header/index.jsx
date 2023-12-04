@@ -13,12 +13,6 @@ export default function Header(props) {
         <Container>
           <Navbar.Brand href="/">
             <h1>DayCraft</h1>
-            {/* <img 
-              src="https://imageupload.io/ib/kK8ODRu2kWfytBI_1699628165.png" 
-              height="75"
-              className="d-inline-block align-top"
-              alt="NANI Logo" 
-            /> */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

@@ -7,7 +7,6 @@ import Link from "next/link"
 import format from "date-fns/format";
 import useLogout from "../hooks/useLogout";
 import Quote from "../components/quote";
-//import styles from "../styles/Home.module.css";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {

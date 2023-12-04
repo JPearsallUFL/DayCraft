@@ -1,4 +1,3 @@
-// import Link from "next/link";
 import useLogout from "../../hooks/useLogout";
 import { useEffect, useState } from "react";
 import format from "date-fns/format";
@@ -6,7 +5,6 @@ import { useRouter } from "next/router";
 import Calendar from "react-calendar";
 import { Container } from "react-bootstrap";
 import 'react-calendar/dist/Calendar.css';
-// import note from "../../pages/api/note";
 
 
 export default function Note(props) {

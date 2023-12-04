@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mmc6950-capstone-vires-jacob.iml" filepath="$PROJECT_DIR$/.idea/mmc6950-capstone-vires-jacob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/daycraft.iml" filepath="$PROJECT_DIR$/.idea/daycraft.iml" />
     </modules>
   </component>
 </project>
