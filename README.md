@@ -11,21 +11,23 @@ React and Node: The application is built using React for the frontend and Node.j
 
 Installation
 
-Follow these steps to set up and run the Employee Evaluation System locally:
+Follow these steps to set up and run DayCraft locally:
 
 Prerequisites
 
-Node.js: Make sure you have Node.js installed on your system. You can download it from [nodejs.org](https://nodejs.org/).
+Node.js: Make sure you have Node.js installed on your system. You can download it from (https://nodejs.org/).
+
+Docker Desktop: Make sure you have Docker Desktop installed on your system. You can download it from (https://www.docker.com/products/docker-desktop/) This will allow you to test locally instead of on the production database.
 
 Installation Steps
 
 1. Clone the repository:
 
-	git clone <TBD>
+	git clone "https://github.com/JPearsallUFL/DayCraft"
 
 2. Navigate to the project directory:
 
-	cd mmc6145-final-project
+	cd DayCraft
 
 3. Open in Visual Studio Code:
 
@@ -38,16 +40,16 @@ Installation Steps
 
 5. Start application:
 
-	npm start 
+	npm run dev
 
 6. Access the application in your web browser at `http://localhost:3000`.
 
-7. I will continue to update this as I progress through the creation
+7. Make your changes. 
 
 Designed Usage
 
 1. Register for an account or log in if you already have one.
-2. After logging in, you will be able to view todays note or navigate to other days.
+2. After logging in, you will be able to view/edit/create todays note or navigate to view other days.
 
 Technology Stack
 
@@ -67,7 +69,7 @@ We welcome contributions from the community. If you would like to contribute to 
 
 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the (LICENSE) file for details.
 
 Contact
 
